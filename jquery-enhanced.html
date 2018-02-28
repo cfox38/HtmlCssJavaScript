@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head> 
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script lang="javascript">
+    	$().ready(function() {
+
+    		$("#inp, #inp2").val("Hello, to all the World!");
+    		$("button").click(function() {
+    		$("#inp").val("The first input box");
+    		$("#inp2").val("The second input box");
+    		//alert("We clicked the button.");
+    	}); 
+
+    	$("label").css("font-family","Arial");
+    	$("#toggle").click(function() {
+    	$("#inp, #inp2").toggle();  
+      	});
+
+      	$("#add").click(function)) {
+    		var username = $("#username").val();
+    		var password = $("#password").val();
+    		$("#inp").val(username); //set the value of the first input box username
+    		$("#inp2").val(password); //top two input boxes we should be able to see what password was put in even though we can't see it in the password field.//
+
+      	});
+
+	});
+    </script>
+</head>
+<body OnLoad="Loaded()">
+	<input id="inp" type="text">
+	<input id="inp2" type="text">
+	<p></p>
+	<button>Click me!</button>
+	<label> This is a label </label>
+	<button id ="toggle"> toggle input boxes </button>
+	<form>
+		<p><label>Username</label><input id="User name" type="text"></p>
+		<p><label>Password</label><input id="Password" type="password"></p>
+		<button id="add">Add</button>
+	</form>
+</body>
+</html>
