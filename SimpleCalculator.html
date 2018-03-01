@@ -6,10 +6,10 @@
     	function Main() { //this function is shared automatically
     	}
 
-    	function OnClick(){
+    	function Clicked(){
 
-    	var inputCtrl = document.getElementById("inp"); //programatic access to the input tag
-    	var inputText = inputCtrl.value;  //whatever the user keyed into the input box
+    	var inputCtrl = document.getElementById("inp"); 
+    	var inputText = inputCtrl.value;  
 
     	var nbr = parseInt(inputText);
     	inputText = nbr * nbr; 
@@ -18,11 +18,83 @@
     	labelCtrl.textContent = inputText;
 
     	}
+        function Add(){
+        var op1Ctrl = document.getElementById("op1"); 
+        var op1 = parseInt(op1Ctrl.value);
+        var op2Ctrl = document.getElementById("op2"); 
+        var op2 = parseInt(op2Ctrl.value);
+
+
+       var inputText = op1 + op2;
+
+        var labelCtrl = document.getElementById("ans");
+        labelCtrl.textContent = inputText;
+
+        }
+        function Sub(){
+        var op1Ctrl = document.getElementById("op1"); 
+        var op1 = parseInt(op1Ctrl.value);
+        var op2Ctrl = document.getElementById("op2"); 
+        var op2 = parseInt(op2Ctrl.value);
+
+
+       var inputText = op1 - op2;
+
+        var labelCtrl = document.getElementById("ans");
+        labelCtrl.textContent = inputText;
+        }
+        function Mult(){
+        var op1Ctrl = document.getElementById("op1"); 
+        var op1 = parseInt(op1Ctrl.value);
+        var op2Ctrl = document.getElementById("op2"); 
+        var op2 = parseInt(op2Ctrl.value);
+
+
+       var inputText = op1 * op2;
+
+        var labelCtrl = document.getElementById("ans");
+        labelCtrl.textContent = inputText;
+        }
+
+        function Div(){
+        var op1Ctrl = document.getElementById("op1"); 
+        var op1 = parseInt(op1Ctrl.value);
+        var op2Ctrl = document.getElementById("op2"); 
+        var op2 = parseInt(op2Ctrl.value);
+
+
+       var inputText = op1 / op2;
+
+        var labelCtrl = document.getElementById("ans");
+        labelCtrl.textContent = inputText;
+        }
+        function Power(){
+        var op1Ctrl = document.getElementById("op1"); 
+        var op1 = parseInt(op1Ctrl.value);
+        var op2Ctrl = document.getElementById("op2"); 
+        var op2 = parseInt(op2Ctrl.value);
+
+
+       var inputText = op1^ op2;
+
+        var labelCtrl = document.getElementById("ans");
+        labelCtrl.textContent = inputText;
+        }
+
+
     </script>
 </head>
 <body OnLoad="Main()">
-	<input id = "inp" type="text">
-	<button id="btn" OnClick="OnClick()"> Click me! </button>
-	<label id ="lbl"></label>
+	<input id = "op1" type="text">
+    <input id = "op2" type="text">
+	<label id ="ans"></label>
+    <p> </p>
+    <button id="add" OnClick="Add()"> Add </button>
+    <button id="sub" OnClick="Sub()"> Sub </button>
+    <button id="mul" OnClick="Mult()"> Mult </button>
+    <button id="div" OnClick="Div()"> Div </button>
+    <button id="div" OnClick="Power()"> Power </button>
+
+
 </body>
 </html>
