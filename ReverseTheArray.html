@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head> 
+    <title></title>
+    <script lang="javascript">
+
+    	var arr =[];
+    	var inpCtrl;
+    	var lblCtrl;
+    	
+    	function Main() {
+
+    		inpCtrl = document.getElementById("inp");
+    		lblCtrl = document.getElementById("lbl");
+    	}
+
+    	function add() {
+    		var nbr = inpCtrl.value;
+    		lblCtrl.textContent = arr.join(",");
+    		inpCtrl.value="";
+    		arr.push(nbr);
+
+        }
+
+        function displayreversed(){
+        	var nbr = inpCtrl.value;
+        	lblCtrl.textContent= arr.reverse("");
+        	inpCtrl.value="";
+        	arr=[];
+	    } 
+	</script>
+</head>
+<body OnLoad="Main()">
+	<input id = "inp" type= "text">
+	<button onclick="add()"> add</button>
+	<button onclick="displayreversed()"> Display Reversed</button>
+	<label id = "lbl"></label>
+</body>
+</html>
